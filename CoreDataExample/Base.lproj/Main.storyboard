@@ -127,9 +127,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jas-zd-Iro" id="M3v-mk-RZy">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Sun-oA-f14" kind="show" identifier="AddArtist" id="Vj6-hZ-g0N"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -140,6 +137,7 @@
                                     <barButtonItem systemItem="add" id="R39-n6-Xkr">
                                         <connections>
                                             <action selector="addArtist:" destination="cNM-Fi-pkf" id="e7C-7r-Sit"/>
+                                            <segue destination="Sun-oA-f14" kind="show" identifier="AddArtist" id="8XG-L1-s1A"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tLn-hd-5xp"/>

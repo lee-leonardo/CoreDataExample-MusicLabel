@@ -18,21 +18,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		self.title = "Labels"
 		
 		var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 		self.myContext = appDelegate.managedObjectContext
 		
-		var request = NSFetchRequest(entityName: "Label")
-		var error : NSError?
+		reloadLabels()
 		
-		self.labels = self.myContext.executeFetchRequest(request, error: &error) as [Label]
-		
-		if error != nil {
-			println(error?.localizedDescription)
-		} else {
-			self.labelTableView.reloadData()
-		}
-		
+	}
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.reloadLabels()
+		self.labelTableView.reloadData()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -48,9 +45,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		if segue.identifier == "addlabel" {
 			let addLabelVC = segue.destinationViewController as AddLabelViewController
 			addLabelVC.delegate = self
+			
 		} else if segue.identifier == "ShowArtists" {
 			let artistsVC = segue.destinationViewController as ArtistsViewController
 			artistsVC.selectedLabel = self.labels[self.labelTableView.indexPathForSelectedRow().row]
+			
 		}
 	}
 
@@ -67,9 +66,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		return cell
 	}
 	
-//MARK: - AddLabelDelegate
-	func labelAdded() {
-		//Good thing to refactor, or use a cache. These are expensive.
+//MARK: Reload
+	func reloadLabels() {
+		
+		//Need to cache this unless...
 		var request = NSFetchRequest(entityName: "Label")
 		var error : NSError?
 		
@@ -82,5 +82,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		}
 	}
 	
+//MARK: - AddLabelDelegate
+	func labelAdded() {
+		self.reloadLabels()
 }
-
+}

@@ -24,6 +24,7 @@ class AddLabelViewController: UIViewController {
 //MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Add Label"
 
 		var appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
 		self.myContext = appDelegate.managedObjectContext

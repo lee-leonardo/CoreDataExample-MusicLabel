@@ -19,6 +19,8 @@
 		380CEDFA19A3C4F10062EB27 /* AddLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CEDF919A3C4F10062EB27 /* AddLabelViewController.swift */; };
 		380CEDFC19A3CBE50062EB27 /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CEDFB19A3CBE50062EB27 /* ArtistsViewController.swift */; };
 		380CEDFE19A3D0520062EB27 /* AddArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380CEDFD19A3D0520062EB27 /* AddArtistViewController.swift */; };
+		38821C8419A3F88F001EC562 /* SongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38821C8319A3F88F001EC562 /* SongsViewController.swift */; };
+		38821C8619A3F89A001EC562 /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38821C8519A3F89A001EC562 /* AddSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		380CEDF919A3C4F10062EB27 /* AddLabelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabelViewController.swift; sourceTree = "<group>"; };
 		380CEDFB19A3CBE50062EB27 /* ArtistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistsViewController.swift; sourceTree = "<group>"; };
 		380CEDFD19A3D0520062EB27 /* AddArtistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddArtistViewController.swift; sourceTree = "<group>"; };
+		38821C8319A3F88F001EC562 /* SongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongsViewController.swift; sourceTree = "<group>"; };
+		38821C8519A3F89A001EC562 /* AddSongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				380CEDF919A3C4F10062EB27 /* AddLabelViewController.swift */,
 				380CEDFB19A3CBE50062EB27 /* ArtistsViewController.swift */,
 				380CEDFD19A3D0520062EB27 /* AddArtistViewController.swift */,
+				38821C8319A3F88F001EC562 /* SongsViewController.swift */,
+				38821C8519A3F89A001EC562 /* AddSongViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -256,12 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				380CEDFA19A3C4F10062EB27 /* AddLabelViewController.swift in Sources */,
+				38821C8619A3F89A001EC562 /* AddSongViewController.swift in Sources */,
 				380CEDF819A3C26F0062EB27 /* Artist.swift in Sources */,
 				380CEDFE19A3D0520062EB27 /* AddArtistViewController.swift in Sources */,
 				380CEDF419A3C26F0062EB27 /* Song.swift in Sources */,
 				380CEDD519A3BCD20062EB27 /* ViewController.swift in Sources */,
 				380CEDD019A3BCD20062EB27 /* AppDelegate.swift in Sources */,
 				380CEDF619A3C26F0062EB27 /* Label.swift in Sources */,
+				38821C8419A3F88F001EC562 /* SongsViewController.swift in Sources */,
 				380CEDD319A3BCD20062EB27 /* CoreDataExample.xcdatamodeld in Sources */,
 				380CEDFC19A3CBE50062EB27 /* ArtistsViewController.swift in Sources */,
 			);
@@ -456,6 +464,7 @@
 				380CEDEB19A3BCD20062EB27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		380CEDEC19A3BCD20062EB27 /* Build configuration list for PBXNativeTarget "CoreDataExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +473,7 @@
 				380CEDEE19A3BCD20062EB27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

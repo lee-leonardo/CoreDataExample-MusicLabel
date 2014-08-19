@@ -7,28 +7,34 @@
 //
 
 import UIKit
+import CoreData
 
 class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var selectedLabel : Label?
 	var artists = [Artist]()
-
+	
 	@IBOutlet weak var artistsTableView: UITableView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Artists"
 		
 		self.artistsTableView.dataSource = self
 		self.artistsTableView.delegate = self
 		
 		self.artists = self.selectedLabel!.artists.allObjects as [Artist]
-
-        // Do any additional setup after loading the view.
+		
     }
+	
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		self.reloadArtists()
+		self.artistsTableView.reloadData()
+	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 	
 //MARK: IBAction
@@ -40,6 +46,22 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
 			let addArtistVC = segue.destinationViewController as AddArtistViewController
 			addArtistVC.selectedLabel = selectedLabel
 		}
+	}
+	
+//MARK: Reload
+	func reloadArtists() {
+		var request = NSFetchRequest(entityName: "Artist")
+		var error : NSError?
+		
+		self.selectedLabel?.managedObjectContext.executeFetchRequest(request, error: &error)
+		
+		if error != nil {
+			println(error!.localizedDescription)
+		} else {
+			self.artists = self.selectedLabel!.artists.allObjects as [Artist]
+			self.artistsTableView.reloadData()
+		}
+		
 	}
 	
 	

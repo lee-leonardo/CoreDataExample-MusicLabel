@@ -14,12 +14,12 @@ class AddArtistViewController: UIViewController {
 	var selectedLabel : Label?
 	
 	@IBOutlet weak var firstNameField: UITextField!
-	
 	@IBOutlet weak var lastNameField: UITextField!
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Add Artist"
 
 	}
 
@@ -42,7 +42,7 @@ class AddArtistViewController: UIViewController {
 		if error != nil {
 			println(error?.localizedDescription)
 		} else {
-			
+			self.navigationController.popViewControllerAnimated(true)
 		}
 		
 	}
