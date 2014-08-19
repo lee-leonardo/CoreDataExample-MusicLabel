@@ -153,10 +153,10 @@
 			isa = PBXGroup;
 			children = (
 				380CEDD419A3BCD20062EB27 /* ViewController.swift */,
-				380CEDF919A3C4F10062EB27 /* AddLabelViewController.swift */,
 				380CEDFB19A3CBE50062EB27 /* ArtistsViewController.swift */,
-				380CEDFD19A3D0520062EB27 /* AddArtistViewController.swift */,
 				38821C8319A3F88F001EC562 /* SongsViewController.swift */,
+				380CEDF919A3C4F10062EB27 /* AddLabelViewController.swift */,
+				380CEDFD19A3D0520062EB27 /* AddArtistViewController.swift */,
 				38821C8519A3F89A001EC562 /* AddSongViewController.swift */,
 			);
 			name = Controller;
