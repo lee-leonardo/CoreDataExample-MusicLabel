@@ -64,7 +64,7 @@ class SongsViewController: UIViewController, UITableViewDataSource {
 //MARK: - UITableView
 	func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
 		let cell = tableView.dequeueReusableCellWithIdentifier("SongCell", forIndexPath: indexPath) as UITableViewCell
-		var song = songs[indexPath.row] as Song
+		var song = songs[indexPath.row]
 		
 		cell.textLabel.text = song.name
 		

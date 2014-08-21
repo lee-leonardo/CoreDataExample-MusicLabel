@@ -45,9 +45,11 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
 		if segue.identifier == "AddArtist" {
 			let addArtistVC = segue.destinationViewController as AddArtistViewController
 			addArtistVC.selectedLabel = selectedLabel
+			
 		} else if segue.identifier == "ShowSongs" {
 			let showDestination = segue.destinationViewController as SongsViewController
 			showDestination.selectedArtist = artists[self.artistsTableView.indexPathForSelectedRow().row]
+			
 		}
 	}
 	
@@ -81,6 +83,7 @@ class ArtistsViewController: UIViewController, UITableViewDelegate, UITableViewD
 	
 	func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
 		return self.artists.count
+		
 	}
 
 }
